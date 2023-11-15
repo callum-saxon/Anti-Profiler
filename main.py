@@ -14,16 +14,16 @@ face_match = False
 ref_img = cv2.imread("reference.jpg")
 
 def check_face(frame):
-      global face_match
-      try:
+    global face_match
+    try:
         if DeepFace.verify(frame, ref_img.copy())['verified']:
-             face_match = True
+            face_match = True
         else:
-             face_match = False
+            face_match = False
 
-      except ValueError:
-           face_match = False
-           pass
+    except ValueError:
+        face_match = False
+        pass
 
 
 while True:
