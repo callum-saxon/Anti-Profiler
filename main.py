@@ -11,7 +11,7 @@ counter = 0
 
 face_match = False
 
-ref_img = cv2.imread("reference.jpg")
+ref_img = cv2.imread("ref.jpg")
 
 def check_face(frame):
     global face_match
