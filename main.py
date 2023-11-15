@@ -13,24 +13,25 @@ ref_img = cv2.imread("ref.jpg")
 def check_face(frame):
     global face_match
     try:
-        if DeepFace.verify(frame, ref_img.copy())['verified']:
+        result = DeepFace.verify(frame, ref_img.copy())
+        if result['verified']:
             face_match = True
         else:
             face_match = False
 
     except ValueError:
         face_match = False
-        pass
 
 while True:
     ret, frame = cap.read()
 
     if ret:
-        try:
-            threading.Thread(target=check_face, args=(frame.copy(),)).start()
-        
-        except ValueError:
-            pass
+        if counter % 30 == 0:
+            try:
+                threading.Thread(target=check_face, args=(frame.copy(),)).start()
+
+            except ValueError:
+                pass
         counter += 1
 
         if face_match:
@@ -44,4 +45,4 @@ while True:
     if key == ord("q"):
         break
 
-    cv2.destroyAllWindows()
+cv2.destroyAllWindows()
