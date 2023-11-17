@@ -34,7 +34,7 @@ cd Anti-Profiler
 4. Run the script:
 
 ```bash
-python face_recognition.py
+python main.py
 ```
 
 Press 'q' to exit the application.
