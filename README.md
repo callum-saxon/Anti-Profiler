@@ -1,4 +1,4 @@
-# Anti-Profiler
+# Profiler
 
 This simple Python script utilizes the OpenCV and DeepFace libraries to perform real-time face recognition using a webcam. The script captures video frames, compares them with a reference image, and displays whether a match is found or not.
 
