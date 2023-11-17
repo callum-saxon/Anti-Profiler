@@ -20,13 +20,13 @@ pip install opencv-python deepface
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/callum-saxon/Anti-Profiler.git
+git clone https://github.com/callum-saxon/Profiler.git
 ```
 
 2. Navigate to the project directory:
 
 ```bash
-cd Anti-Profiler
+cd Profiler
 ```
 
 3. Place your reference image as "ref.jpg" in the project directory.
